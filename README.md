@@ -27,8 +27,15 @@ The data consists in user logs saved along 11 days, in which there is an informa
 
 
 ### An overview on the implementation
-To run the code:
-cd <path_to_this_root_folder>/src
-python avazu.py -t <training_file>
+>####To run the code:
+1. cd <path_to_this_root_folder>/src
+2. python _avazu.py_ -t <training_file>
 
-**Note**: The -h flag will show more flags that you can use to specify samplings or more processes that you may want to perform.
+>**Note**: The -h flag will show more flags that you can use to specify samplings or more processes that you may want to perform.
+
+>####Brief Explanation: 
+The _avazu.py_ file controls the process, from the data retrieval phase until the result output (using Logarithmic Loss).
+
+>- First phase: _preprocessor.py_ analyses what files the programs needs to retrieve and eventually sample them into training and testing datasets according to the 70/30 rule;
+- Second phase: _feat_engineering.py_ determines which operations will be done over the dataset in order to obtain better features;
+- Third phase: _ml.py_ gathers the modified dataset, trains the model (a Random Forest) after it performs Feature Selection, and applies the model over the validation/test dataset, and computes the Log. Loss score.
