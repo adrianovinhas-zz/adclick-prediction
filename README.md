@@ -28,8 +28,8 @@ The data consists in user logs saved along 11 days, in which there is an informa
 
 ### An overview on the implementation
 >####To run the code:
-1. cd <path_to_this_root_folder>/src
-2. python _avazu.py_ -t <training_file>
+1. cd "path_to_this_root_folder"/src
+2. python _avazu.py_ -t "training_file"
 
 >**Note**: The -h flag will show more flags that you can use to specify samplings or more processes that you may want to perform.
 
